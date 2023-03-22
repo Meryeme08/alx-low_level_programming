@@ -1,17 +1,22 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _abs - is a a function that cumputs the absolute value of a num
- * @a: input
- * Return: positive value of ab
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-int _abs(int a)
+int main(void)
 {
-	if (a < 0)
-	{
-		a = -a;
-		return (a);
-	}
-	else
-		return (a);
+    int r;
+
+    r = _abs(-1);
+    printf("%d\n", r);
+    r = _abs(0);
+    printf("%d\n", r);
+    r = _abs(1);
+    printf("%d\n", r);
+    r = _abs(-98);
+    printf("%d\n", r);
+    return (0);
 }
