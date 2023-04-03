@@ -3,6 +3,7 @@
  * _memcpy - a function that copies memory area
  * @dest: memory where is stored
  * @src: number of bytes
+ * @n: number of bytes
  *
  * Return: copied memory with n bytes chenged
  */
