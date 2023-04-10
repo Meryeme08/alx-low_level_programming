@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		{
 			if (!isdigit(argv[i][j]))
 			{
-				printf("Error: argument %d is not a number\n", i);
+				printf("Error\n");
 				return (1);
 			}
 		}
