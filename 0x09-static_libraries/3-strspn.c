@@ -1,29 +1,33 @@
 #include "main.h"
+
 /**
  * _strspn - Entry point
  * @s: input
  * @accept: input
- * Return: Always 0 (Success)
+ * Return: number of bytes in s that consist of bytes from accept
  */
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n = 0;
-	int r;
+	int i, j;
+	int accept_len = 0;
 
-	while (*s)
+	while (accept[accept_len])
+		accept_len++;
+
+	for (i = 0; s[i]; i++)
 	{
-		for (r = 0; accept[r]; r++)
+		for (j = 0; j < accept_len; j++)
 		{
-			if (*s == accept[r])
+			if (s[i] == accept[j])
 			{
 				n++;
 				break;
 			}
-			else if (accept[r + 1] == '\0')
-				return (n);
 		}
-		s++;
+		if (j == accept_len)
+			break;
 	}
+
 	return (n);
 }
-

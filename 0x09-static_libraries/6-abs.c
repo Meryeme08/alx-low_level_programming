@@ -1,4 +1,10 @@
-#include "main.h"
+#ifndef MAIN_H
+#define MAIN_H
+
+int _abs(int n);
+
+#endif /* MAIN_H */
+
 
 /**
  * _abs - computes the absolute value of an integer
@@ -7,10 +13,5 @@
  */
 int _abs(int n)
 {
-	if (n >= 0)
-	{
-		return (n);
-	}
-	return (-n);
+	return (n < 0 ? -n : n);
 }
-
